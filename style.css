@@ -9,6 +9,7 @@ body {
 
 img {
    max-width: 100%;
+   height: auto;
 }
 
 a {
@@ -272,8 +273,8 @@ span {
    .center {
       padding-left: calc(50% - 172px);
       padding-right: calc(50% - 172px);
-      padding-left: 16px;
-      padding-right: 16px;
+      padding-left: 32px;
+      padding-right: 32px;
 
    }
 
