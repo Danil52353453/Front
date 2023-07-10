@@ -163,12 +163,13 @@ span {
 }
 
 .product_contents {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
    align-content: center;
-   align-items: center;
    justify-content: center;
-   justify-items: center;
+   align-items: center;
+   gap: 30px;
 }
 
 
@@ -181,8 +182,7 @@ span {
 
 .product_info {
    display: flex;
-   width: 320px;
-   padding: 24px 16px;
+
    flex-direction: column;
    justify-content: center;
    align-items: flex-start;
@@ -192,6 +192,7 @@ span {
 .product_text {
    color: #5D5D5D;
    font-size: 14px;
+   
 }
 
 .product_price {
@@ -253,9 +254,6 @@ span {
    }
 
    .product_contents {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      justify-content: center;
       gap: 16px;
 
    }
@@ -314,17 +312,17 @@ span {
       gap: 32px;
       margin-bottom: 32px;
    }
-   .sale__item__big{
+
+   .sale__item__big {
       padding-bottom: 64px;
    }
-   .sale__big-img{
+
+   .sale__big-img {
       height: 111px;
    }
 
    .product_contents {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      justify-content: center;
+
       gap: 32px;
    }
 }
