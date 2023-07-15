@@ -421,6 +421,8 @@ ul {
    background-size: cover;
 }
 
+
+
 .footer_background {
    background: rgba(244, 244, 244, 0.7);
 }
@@ -651,7 +653,12 @@ ul {
    }
 
    .footer_buttom {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
       justify-content: center;
+  }
+      
    }
 
    .footer_copiter_text {
