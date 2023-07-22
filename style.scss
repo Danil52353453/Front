@@ -1,4 +1,5 @@
-$colorsite: #f16d7f;
+@import "vars";
+@import "mixin";
 * {
   margin: 0;
   padding: 0;
@@ -26,14 +27,14 @@ span {
   color: $colorsite;
 }
 
-summary{
-    display: block;
+summary {
+  display: block;
 
-    &::-webkit-details-marker{
-        display: none;
-      }
-    }
-    
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+
 .botton {
   display: flex;
   flex-wrap: nowrap;
@@ -57,7 +58,6 @@ summary{
     background: white;
   }
 }
-
 
 .top_box {
   position: relative;
@@ -99,7 +99,7 @@ summary{
       }
 
       &_drop_heading {
-        color: #000;
+        color: $colortext;
         font-size: 14px;
         font-style: normal;
         font-weight: 700;
@@ -139,7 +139,7 @@ summary{
       }
 
       &_drop-link:hover {
-        color: #f26376;
+        color: $colorsite;
       }
 
       ul {
@@ -173,11 +173,77 @@ summary{
 
     &__content {
       margin-top: 40%;
-      border-left: 12px solid #f16d7f;
+      border-left: 12px solid $colorsite;
       padding-left: 16px;
       font-style: normal;
       font-weight: 900;
       line-height: normal;
+    }
+  }
+}
+
+.filter {
+  width: 100%;
+  padding: 13px 16px 16px;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 1;
+  &-box {
+    position: relative;
+    height: 40px;
+    width: 360px;
+  }
+  &__link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6f6e6e;
+  }
+  &:hover {
+    color: $colorsite;
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px;
+    gap: 11px;
+  }
+  &-sort {
+    padding-top: 39px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  &__summary {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+  }
+  &[open] {
+    background: #ffffff;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    & .filter__summary {
+      color: $colorsite;
+    }
+    & .filter__img path {
+      fill: $colorsite;
+    }
+  }
+  &__category {
+    margin-top: 16px;
+    &-summary {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: #6f6e6e;
+      padding: 8px 11px 11px;
+      border-left: 5px solid $colorsite;
+      border-bottom: 1px solid #ebebeb;
+    }
+    &[open] .filter__category-summary {
+      color: $colorsite;
     }
   }
 }
@@ -254,19 +320,18 @@ summary{
 .content {
   padding-bottom: 130px;
   position: relative;
-  
-  
-.content__size{
-  background: #fff;
-  gap: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border: 1px solid #EAEAEA;
-  margin: -50px auto 0;
-}
+
+  .content__size {
+    background: #fff;
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #eaeaea;
+    margin: -50px auto 0;
+  }
   &__heading {
     padding-top: 64px;
     font-size: 14px;
@@ -307,7 +372,6 @@ summary{
     font-weight: 300;
     line-height: normal;
     color: $colorsite;
-   
   }
 
   &__line-big {
@@ -323,8 +387,6 @@ summary{
   gap: 42px;
   margin-bottom: 48px;
   margin-top: 48px;
-
-  
 }
 .botton__add {
   width: 212px;
@@ -339,9 +401,8 @@ summary{
   justify-content: center;
   align-items: center;
   gap: 22px;
+  margin-bottom: 65px;
 }
-
-
 
 .sale {
   padding-top: 65px;
@@ -446,11 +507,6 @@ summary{
     filter: brightness(0.5);
   }
 
-  &_heading {
-    color: #000;
-    font-size: 16px;
-  }
-
   &_info {
     display: flex;
 
@@ -459,7 +515,14 @@ summary{
     align-items: flex-start;
     gap: 16px;
   }
-
+  &_heading {
+    color: #000;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 26px;
+  }
   &_text {
     color: #5d5d5d;
     font-size: 14px;
@@ -497,7 +560,30 @@ summary{
     fill: #f16;
   }
 }
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding-top: 49px;
+  &__border {
+    display: flex;
+    gap: 18px;
+    border: 1px solid #ebebeb;
+    align-items: center;
+    justify-content: center;
+  }
+  &__link {
+    color: #c4c4c4;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding: 15px;
+  }
 
+  &__link:hover{
+    color: $colorsite;
+  }
+}
 .feature {
   background-color: #222224;
   padding-top: 104px;
