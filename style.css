@@ -540,6 +540,9 @@ summary::-webkit-details-marker {
 .pagination__link:hover {
   color: #f16d7f;
 }
+.pagination .active {
+  color: #f16d7f;
+}
 
 .feature {
   background-color: #222224;

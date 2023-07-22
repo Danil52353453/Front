@@ -203,6 +203,7 @@ summary {
   &:hover {
     color: $colorsite;
   }
+
   &__box {
     display: flex;
     flex-direction: column;
@@ -582,6 +583,9 @@ summary {
 
   &__link:hover{
     color: $colorsite;
+  }
+  .active {
+    color: $colorsite;  
   }
 }
 .feature {
