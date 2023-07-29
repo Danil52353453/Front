@@ -3,10 +3,12 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Lato", sans-serif;
+  overflow-x: hidden;
 }
 
 img {
@@ -61,7 +63,6 @@ summary {
 
 .top_box {
   position: relative;
-  overflow: hidden;
 
   .header {
     height: 75px;
@@ -96,6 +97,7 @@ summary {
         width: 232px;
         box-sizing: border-box;
         transition: right 0.5s;
+        z-index: 1;
       }
 
       &_drop_heading {
@@ -388,6 +390,13 @@ summary {
   gap: 42px;
   margin-bottom: 48px;
   margin-top: 48px;
+  &__summary {
+    color: #6f6e6e;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 }
 .botton__add {
   width: 212px;
@@ -457,6 +466,192 @@ summary {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+  }
+}
+
+.bascet {
+  padding-top: 96px;
+  padding-bottom: 128px;
+  display: flex;
+  gap: 128px;
+
+  &__card_item {
+    max-width: 652px;
+    margin-bottom: 40px;
+    display: flex;
+    position: relative;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+
+    .bascet__card_header {
+      color: $colortext;
+
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 42px;
+    }
+    .bascet__card_description {
+      padding: 20px 67px 100px 30px;
+      gap: 6px;
+      display: flex;
+      flex-direction: column;
+      padding-left: 31px;
+      &_product {
+        color: #575757;
+        font-family: Lato;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      input[type="number"] {
+        border: 1px solid #eaeaea;
+        width: 44px;
+        height: 24.949px;
+        color: #656565;
+        text-indent: 12px;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+    .bascet__card_svg {
+      position: absolute;
+      right: 22px;
+      top: 22px;
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+  }
+  &__button {
+    display: flex;
+    gap: 150px;
+    &_item {
+      color: $colortext;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      padding: 17px 40px;
+      background: white;
+      border: 1px solid #a4a4a4;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $colorsite;
+        transition: all 0.2s ease-in-out;
+        color: white;
+      }
+    }
+  }
+  .bascet__right {
+    display: flex;
+    max-width: 360px;
+    flex-direction: column;
+    gap: 57px;
+    .form {
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      &__heading {
+        color: $colortext;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+      }
+      &__input {
+        display: flex;
+        flex-direction: column;
+        &_text {
+          width: 360px;
+          height: 45px;
+          padding-left: 15px;
+          color: #b1b1b1;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+          border: 1px solid #a4a4a4;
+        }
+        .form__button {
+          border: 1px solid #a4a4a4;
+          width: 101.408px;
+          height: 35px;
+          background: white;
+          font-size: 11px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+          cursor: pointer;
+          &:hover {
+            background-color: $colorsite;
+            transition: all 0.2s ease-in-out;
+            color: white;
+          }
+        }
+      }
+    }
+
+    .cart__total {
+      background-color: #f5f3f3;
+      padding: 40px 44px;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      &-mini {
+        color: #4a4a4a;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 12px;
+        span {
+          margin-left: 21px;
+        }
+      }
+      &-big {
+        color: $colortext;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        margin-bottom: 21px;
+        span {
+          margin-left: 21px;
+        }
+      }
+      &-line {
+        width: 275px;
+        height: 1px;
+        background-color: #e2e2e2;
+        margin-bottom: 17px;
+      }
+      &-buttoon {
+        padding: 15px 42px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 300;
+        background: $colorsite;
+        border: none;
+        line-height: 19px;
+        cursor: pointer;
+        &:hover{
+          background-color: white;
+          color: $colorsite;
+          border: 1px solid $colorsite;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
   }
 }
 
@@ -581,11 +776,11 @@ summary {
     padding: 15px;
   }
 
-  &__link:hover{
+  &__link:hover {
     color: $colorsite;
   }
   .active {
-    color: $colorsite;  
+    color: $colorsite;
   }
 }
 .feature {

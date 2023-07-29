@@ -1,10 +1,12 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Lato", sans-serif;
+  overflow-x: hidden;
 }
 
 img {
@@ -56,7 +58,6 @@ summary::-webkit-details-marker {
 
 .top_box {
   position: relative;
-  overflow: hidden;
 }
 .top_box .header {
   height: 75px;
@@ -90,6 +91,7 @@ summary::-webkit-details-marker {
   width: 232px;
   box-sizing: border-box;
   transition: right 0.5s;
+  z-index: 1;
 }
 .top_box .header .menu_drop_heading {
   color: #000;
@@ -358,6 +360,13 @@ summary::-webkit-details-marker {
   margin-bottom: 48px;
   margin-top: 48px;
 }
+.sort__summary {
+  color: #6f6e6e;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 
 .botton__add {
   width: 212px;
@@ -424,6 +433,187 @@ summary::-webkit-details-marker {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.bascet {
+  padding-top: 96px;
+  padding-bottom: 128px;
+  display: flex;
+  gap: 128px;
+}
+.bascet__card_item {
+  max-width: 652px;
+  margin-bottom: 40px;
+  display: flex;
+  position: relative;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.bascet__card_item .bascet__card_header {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 42px;
+}
+.bascet__card_item .bascet__card_description {
+  padding: 20px 67px 100px 30px;
+  gap: 6px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 31px;
+}
+.bascet__card_item .bascet__card_description_product {
+  color: #575757;
+  font-family: Lato;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.bascet__card_item .bascet__card_description input[type=number] {
+  border: 1px solid #eaeaea;
+  width: 44px;
+  height: 24.949px;
+  color: #656565;
+  text-indent: 12px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.bascet__card_item .bascet__card_description input[type=number]::-webkit-outer-spin-button,
+.bascet__card_item .bascet__card_description input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.bascet__card_item .bascet__card_svg {
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.bascet__button {
+  display: flex;
+  gap: 150px;
+}
+.bascet__button_item {
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding: 17px 40px;
+  background: white;
+  border: 1px solid #a4a4a4;
+  cursor: pointer;
+}
+.bascet__button_item:hover {
+  background-color: #f16d7f;
+  transition: all 0.2s ease-in-out;
+  color: white;
+}
+.bascet .bascet__right {
+  display: flex;
+  max-width: 360px;
+  flex-direction: column;
+  gap: 57px;
+}
+.bascet .bascet__right .form {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.bascet .bascet__right .form__heading {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.bascet .bascet__right .form__input {
+  display: flex;
+  flex-direction: column;
+}
+.bascet .bascet__right .form__input_text {
+  width: 360px;
+  height: 45px;
+  padding-left: 15px;
+  color: #b1b1b1;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  border: 1px solid #a4a4a4;
+}
+.bascet .bascet__right .form__input .form__button {
+  border: 1px solid #a4a4a4;
+  width: 101.408px;
+  height: 35px;
+  background: white;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  cursor: pointer;
+}
+.bascet .bascet__right .form__input .form__button:hover {
+  background-color: #f16d7f;
+  transition: all 0.2s ease-in-out;
+  color: white;
+}
+.bascet .bascet__right .cart__total {
+  background-color: #f5f3f3;
+  padding: 40px 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.bascet .bascet__right .cart__total-mini {
+  color: #4a4a4a;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 12px;
+}
+.bascet .bascet__right .cart__total-mini span {
+  margin-left: 21px;
+}
+.bascet .bascet__right .cart__total-big {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-bottom: 21px;
+}
+.bascet .bascet__right .cart__total-big span {
+  margin-left: 21px;
+}
+.bascet .bascet__right .cart__total-line {
+  width: 275px;
+  height: 1px;
+  background-color: #e2e2e2;
+  margin-bottom: 17px;
+}
+.bascet .bascet__right .cart__total-buttoon {
+  padding: 15px 42px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  background: #f16d7f;
+  border: none;
+  line-height: 19px;
+  cursor: pointer;
+}
+.bascet .bascet__right .cart__total-buttoon:hover {
+  background-color: white;
+  color: #f16d7f;
+  border: 1px solid #f16d7f;
+  transition: all 0.2s ease-in-out;
 }
 
 .product {
