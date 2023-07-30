@@ -644,7 +644,7 @@ summary {
         border: none;
         line-height: 19px;
         cursor: pointer;
-        &:hover{
+        &:hover {
           background-color: white;
           color: $colorsite;
           border: 1px solid $colorsite;
@@ -652,6 +652,100 @@ summary {
         }
       }
     }
+  }
+}
+
+.form-registration {
+  .registration-box {
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+  .registration-block {
+    margin-right: 128px;
+    .registration-form-heading {
+      color: #222;
+      font-family: Lato;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+    .form-registration-input {
+      width: 360px;
+      background: #ffffff;
+      border: 1px solid #a4a4a4;
+      padding: 15px 17px;
+      margin-top: 20px;
+    }
+    .radio-input {
+      margin-right: 10px;
+      margin-bottom: 33px;
+      margin-top: 20px;
+    }
+    .radio-name {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 11px;
+      line-height: 13px;
+      color: #000000;
+      margin-right: 20px;
+    }
+    .form-registration-text {
+      max-width: 359px;
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 16px;
+      color: #b1b1b1;
+      margin-block-end: 0;
+      margin-top: 15px;
+      margin-bottom: 40px;
+    }
+    .form-registration-button {
+      position: relative;
+      background: $colorsite;
+      font-size: 14px;
+      line-height: 17px;
+      color: #ffffff;
+      padding: 16px 66px 17px 27px;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background: white;
+        color: $colorsite;
+        border: 1px solid $colorsite;
+        transition: all 0.2s ease-in-out;
+        
+      }
+
+      .form__svg {
+        position: absolute;
+        right: 27px;
+      }
+    }
+  }
+  .registration-text-block {
+    color: #000;
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    .registration-text {
+      padding: 22px 0;
+    }
+    .registration-ul {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;    
+      list-style-image: url(/img/regictr.svg);
+    }
+   
   }
 }
 
