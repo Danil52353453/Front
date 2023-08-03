@@ -23,6 +23,7 @@ a {
 .center {
   padding-left: calc(50% - 570px);
   padding-right: calc(50% - 570px);
+  
 }
 
 span {
@@ -476,7 +477,8 @@ summary {
   gap: 128px;
 
   &__card_item {
-    max-width: 652px;
+    max-width: 714px;
+    height: 260px;
     margin-bottom: 40px;
     display: flex;
     position: relative;
@@ -492,7 +494,7 @@ summary {
       margin-bottom: 42px;
     }
     .bascet__card_description {
-      padding: 20px 67px 100px 30px;
+      padding: 14px 67px 100px 30px;
       gap: 6px;
       display: flex;
       flex-direction: column;
@@ -603,7 +605,7 @@ summary {
 
     .cart__total {
       background-color: #f5f3f3;
-      padding: 40px 44px;
+      padding: 40px 40px;
       display: flex;
       flex-direction: column;
       align-items: end;
@@ -636,7 +638,7 @@ summary {
         margin-bottom: 17px;
       }
       &-buttoon {
-        padding: 15px 42px;
+        padding: 15px 48px;
         color: #fff;
         font-size: 14px;
         font-weight: 300;
@@ -720,13 +722,19 @@ summary {
         color: $colorsite;
         border: 1px solid $colorsite;
         transition: all 0.2s ease-in-out;
-        
+
+        .form__svg path{
+          fill: $colorsite;
+        }
+
       }
 
       .form__svg {
         position: absolute;
         right: 27px;
       }
+
+      
     }
   }
   .registration-text-block {
@@ -804,6 +812,7 @@ summary {
     justify-content: center;
     align-items: flex-start;
     gap: 16px;
+
   }
   &_heading {
     color: #000;
@@ -921,13 +930,17 @@ summary {
 
   .info_box {
     display: flex;
-    flex-direction: row;
     height: 448px;
     align-items: center;
     justify-content: center;
     align-content: center;
     text-align: center;
-    gap: 327px;
+    
+    
+    .info{
+      max-width: 365px;
+      margin-right: 220px;
+    }
     &_img {
       display: block;
       margin: 0 auto;
@@ -1006,7 +1019,6 @@ summary {
 }
 
 .footer_buttom {
-  /* background: #222224; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1034,12 +1046,13 @@ summary {
 }
 
 @media (max-width: 1023px) {
-  .center {
+  .center{
     padding-left: calc(50% - 368px);
     padding-right: calc(50% - 368px);
-    padding-left: 16px;
-    padding-right: 16px;
+    
   }
+
+ 
 
   .top__content {
     font-size: 16px;
@@ -1074,14 +1087,30 @@ summary {
 
   .info_box {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
     flex-direction: column;
     padding-top: 54px;
     padding-bottom: 140px;
-    gap: 1px;
+    
+  }
+  .footer_top{
+    .info{
+      max-width: 365px;
+      margin-left: 220px;
+      margin-bottom: 44px;
+    }
+  }
+  .bascet{
+    display: flex;
+    flex-direction: column;
+    .bascet__right{
+          flex-direction: row;
+          gap: 15px;
+    }
+  }
+  .registration-box{
+    .registration-text-block{
+      font-size: 16px;
+    }
   }
 }
 
@@ -1092,6 +1121,8 @@ summary {
     padding-left: 32px;
     padding-right: 32px;
   }
+
+
 
   .header__right {
     gap: 16px;
@@ -1148,4 +1179,7 @@ summary {
     gap: 40px;
     justify-content: center;
   }
+
+  
+  
 }

@@ -442,7 +442,8 @@ summary::-webkit-details-marker {
   gap: 128px;
 }
 .bascet__card_item {
-  max-width: 652px;
+  max-width: 714px;
+  height: 260px;
   margin-bottom: 40px;
   display: flex;
   position: relative;
@@ -457,7 +458,7 @@ summary::-webkit-details-marker {
   margin-bottom: 42px;
 }
 .bascet__card_item .bascet__card_description {
-  padding: 20px 67px 100px 30px;
+  padding: 14px 67px 100px 30px;
   gap: 6px;
   display: flex;
   flex-direction: column;
@@ -566,7 +567,7 @@ summary::-webkit-details-marker {
 }
 .bascet .bascet__right .cart__total {
   background-color: #f5f3f3;
-  padding: 40px 44px;
+  padding: 40px 40px;
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -600,7 +601,7 @@ summary::-webkit-details-marker {
   margin-bottom: 17px;
 }
 .bascet .bascet__right .cart__total-buttoon {
-  padding: 15px 42px;
+  padding: 15px 48px;
   color: #fff;
   font-size: 14px;
   font-weight: 300;
@@ -660,8 +661,7 @@ summary::-webkit-details-marker {
   font-size: 13px;
   line-height: 16px;
   color: #b1b1b1;
-  -webkit-margin-after: 0;
-          margin-block-end: 0;
+  margin-block-end: 0;
   margin-top: 15px;
   margin-bottom: 40px;
 }
@@ -680,6 +680,9 @@ summary::-webkit-details-marker {
   color: #f16d7f;
   border: 1px solid #f16d7f;
   transition: all 0.2s ease-in-out;
+}
+.form-registration .registration-block .form-registration-button:hover .form__svg path {
+  fill: #f16d7f;
 }
 .form-registration .registration-block .form-registration-button .form__svg {
   position: absolute;
@@ -863,13 +866,15 @@ summary::-webkit-details-marker {
 }
 .footer_top .info_box {
   display: flex;
-  flex-direction: row;
   height: 448px;
   align-items: center;
   justify-content: center;
   align-content: center;
   text-align: center;
-  gap: 327px;
+}
+.footer_top .info_box .info {
+  max-width: 365px;
+  margin-right: 220px;
 }
 .footer_top .info_box_img {
   display: block;
@@ -938,7 +943,6 @@ summary::-webkit-details-marker {
 }
 
 .footer_buttom {
-  /* background: #222224; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -967,8 +971,6 @@ summary::-webkit-details-marker {
   .center {
     padding-left: calc(50% - 368px);
     padding-right: calc(50% - 368px);
-    padding-left: 16px;
-    padding-right: 16px;
   }
   .top__content {
     font-size: 16px;
@@ -996,14 +998,25 @@ summary::-webkit-details-marker {
   }
   .info_box {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
     flex-direction: column;
     padding-top: 54px;
     padding-bottom: 140px;
-    gap: 1px;
+  }
+  .footer_top .info {
+    max-width: 365px;
+    margin-left: 220px;
+    margin-bottom: 44px;
+  }
+  .bascet {
+    display: flex;
+    flex-direction: column;
+  }
+  .bascet .bascet__right {
+    flex-direction: row;
+    gap: 15px;
+  }
+  .registration-box .registration-text-block {
+    font-size: 16px;
   }
 }
 @media (max-width: 767px) {
