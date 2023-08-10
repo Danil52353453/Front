@@ -164,7 +164,6 @@ summary::-webkit-details-marker {
 }
 
 .filter {
-  width: 100%;
   padding: 13px 16px 16px;
   box-sizing: border-box;
   position: absolute;
@@ -298,7 +297,7 @@ summary::-webkit-details-marker {
   padding-bottom: 130px;
   position: relative;
 }
-.content .content__size {
+.content__size {
   background: #fff;
   gap: 12px;
   display: flex;
@@ -367,6 +366,14 @@ summary::-webkit-details-marker {
   font-weight: 400;
   line-height: normal;
 }
+.sort__details {
+  color: #6F6E6E;
+  font-family: Lato;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 
 .botton__add {
   width: 212px;
@@ -391,6 +398,7 @@ summary::-webkit-details-marker {
 .sale .sale__content {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-content: center;
   justify-content: center;
   align-items: center;
@@ -539,7 +547,7 @@ summary::-webkit-details-marker {
   flex-direction: column;
 }
 .bascet .bascet__right .form__input_text {
-  width: 360px;
+  width: 350px;
   height: 45px;
   padding-left: 15px;
   color: #b1b1b1;
@@ -1005,6 +1013,7 @@ summary::-webkit-details-marker {
   .footer_top .info {
     max-width: 365px;
     margin-left: 220px;
+    padding-top: 70px;
     margin-bottom: 44px;
   }
   .bascet {
@@ -1012,8 +1021,12 @@ summary::-webkit-details-marker {
     flex-direction: column;
   }
   .bascet .bascet__right {
-    flex-direction: row;
     gap: 15px;
+    flex-direction: row;
+  }
+  .bascet .bascet__button {
+    gap: 44px;
+    justify-content: center;
   }
   .registration-box .registration-text-block {
     font-size: 16px;
@@ -1023,8 +1036,6 @@ summary::-webkit-details-marker {
   .center {
     padding-left: calc(50% - 172px);
     padding-right: calc(50% - 172px);
-    padding-left: 32px;
-    padding-right: 32px;
   }
   .header__right {
     gap: 16px;
@@ -1046,9 +1057,16 @@ summary::-webkit-details-marker {
     justify-content: center;
     align-items: center;
   }
-  .top__content {
+  .top__right .top__content {
     margin-top: 0;
+    margin-right: -180px;
     font-size: 12px;
+  }
+  .top__right .top__heading {
+    font-size: 38px;
+  }
+  .top__right .top__heading-mini {
+    font-size: 20px;
   }
   .sale__content {
     flex-direction: column;
@@ -1064,10 +1082,63 @@ summary::-webkit-details-marker {
   .product_contents {
     gap: 32px;
   }
+  .pagination {
+    flex-direction: column;
+  }
+  .pagination .pagination__border {
+    gap: 0;
+  }
   .footer_buttom {
     display: flex;
     flex-direction: column;
     gap: 40px;
     justify-content: center;
+  }
+  .footer_top .info {
+    margin-bottom: 15px;
+  }
+  .footer_top .info_text {
+    font-size: 14px;
+    width: 343px;
+  }
+  .footer_top .subscribe-subtitle {
+    font-size: 14px;
+  }
+  .head {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .bascet {
+    gap: 48px;
+  }
+  .bascet .bascet__right {
+    flex-direction: column;
+    gap: 48px;
+  }
+  .bascet .bascet__card_item {
+    height: 200px;
+  }
+  .bascet .bascet__card_header {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  .bascet .bascet__card_description_product {
+    font-size: 14px;
+  }
+  .bascet .bascet__button_item {
+    font-size: 12px;
+    padding: 9px 17px;
+  }
+  .bascet .bascet__img {
+    width: 143.859px;
+    height: 188px;
+  }
+  .bascet .bascet__card_description {
+    padding: 13px 53px 138px 16px;
+    gap: 3px;
+  }
+  .registration-box {
+    flex-direction: column;
+    gap: 40px;
   }
 }/*# sourceMappingURL=style.css.map */
